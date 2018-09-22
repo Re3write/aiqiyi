@@ -1,0 +1,93 @@
+/home/sk39/anaconda3/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Using TensorFlow backend.
+WARNING:tensorflow:From /home/sk39/anaconda3/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:2901: calling l2_normalize (from tensorflow.python.ops.nn_impl) with dim is deprecated and will be removed in a future version.
+Instructions for updating:
+dim is deprecated, use axis instead
+WARNING:tensorflow:From /home/sk39/anaconda3/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:1188: calling reduce_sum (from tensorflow.python.ops.math_ops) with keep_dims is deprecated and will be removed in a future version.
+Instructions for updating:
+keep_dims is deprecated, use keepdims instead
+2018-05-10 16:56:30.676861: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-05-10 16:56:33.492350: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1212] Found device 0 with properties: 
+name: Tesla P100-PCIE-16GB major: 6 minor: 0 memoryClockRate(GHz): 1.3285
+pciBusID: 0000:02:00.0
+totalMemory: 15.89GiB freeMemory: 15.60GiB
+2018-05-10 16:56:33.492411: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2018-05-10 16:56:33.872026: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15128 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:02:00.0, compute capability: 6.0)
+WARNING:tensorflow:From /home/sk39/anaconda3/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:1290: calling reduce_mean (from tensorflow.python.ops.math_ops) with keep_dims is deprecated and will be removed in a future version.
+Instructions for updating:
+keep_dims is deprecated, use keepdims instead
+image len 2812
+yes 2276
+val_acc 0.8093883357041252
+save new model successfully ./checkpoints/models/collar_design_labels_dense_avg_0.8093883357041252.h5
+image len 5477
+yes 4417
+val_acc 0.8064633923680847
+save new model successfully ./checkpoints/models/neckline_design_labels_inception_avg_0.8064633923680847.h5
+image len 5477
+yes 4384
+val_acc 0.8004381960927515
+save new model successfully ./checkpoints/models/neckline_design_labels_dense_avg_0.8004381960927515.h5
+image len 3415
+yes 2809
+val_acc 0.8225475841874085
+save new model successfully ./checkpoints/models/skirt_length_labels_inception_avg_0.8225475841874085.h5
+image len 3415
+yes 2793
+val_acc 0.8178623718887262
+save new model successfully ./checkpoints/models/skirt_length_labels_dense_avg_0.8178623718887262.h5
+image len 4821
+yes 3829
+val_acc 0.7942335615017632
+save new model successfully ./checkpoints/models/sleeve_length_labels_inception_avg_0.7942335615017632.h5
+image len 4821
+yes 3820
+val_acc 0.7923667288944203
+save new model successfully ./checkpoints/models/sleeve_length_labels_dense_avg_0.7923667288944203.h5
+image len 2160
+yes 1717
+val_acc 0.7949074074074074
+save new model successfully ./checkpoints/models/neck_design_labels_inception_avg_0.7949074074074074.h5
+image len 2160
+yes 1708
+val_acc 0.7907407407407407
+save new model successfully ./checkpoints/models/neck_design_labels_dense_avg_0.7907407407407407.h5
+image len 4071
+yes 3022
+val_acc 0.7423237533775485
+save new model successfully ./checkpoints/models/coat_length_labels_inception_avg_0.7423237533775485.h5
+image len 4071
+yes 3029
+val_acc 0.7440432326209776
+save new model successfully ./checkpoints/models/coat_length_labels_dense_avg_0.7440432326209776.h5
+image len 2517
+yes 2107
+val_acc 0.8371076678585618
+save new model successfully ./checkpoints/models/lapel_design_labels_inception_avg_0.8371076678585618.h5
+image len 2517
+yes 2052
+val_acc 0.8152562574493445
+save new model successfully ./checkpoints/models/lapel_design_labels_dense_avg_0.8152562574493445.h5
+image len 3243
+yes 2616
+val_acc 0.8066604995374653
+save new model successfully ./checkpoints/models/pant_length_labels_dense_avg_0.8066604995374653.h5
+2018-06-01 23:49:31.985059: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-06-01 23:49:35.727055: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1212] Found device 0 with properties: 
+name: Tesla P100-PCIE-16GB major: 6 minor: 0 memoryClockRate(GHz): 1.3285
+pciBusID: 0000:02:00.0
+totalMemory: 15.89GiB freeMemory: 15.60GiB
+2018-06-01 23:49:35.727109: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2018-06-01 23:49:36.104325: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15128 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:02:00.0, compute capability: 6.0)
+2018-06-02 00:57:17.606973: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-06-02 00:57:20.537493: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1212] Found device 0 with properties: 
+name: Tesla P100-PCIE-16GB major: 6 minor: 0 memoryClockRate(GHz): 1.3285
+pciBusID: 0000:02:00.0
+totalMemory: 15.89GiB freeMemory: 15.60GiB
+2018-06-02 00:57:20.537547: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2018-06-02 00:57:20.912665: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15128 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:02:00.0, compute capability: 6.0)
+/home/sk49/anaconda3/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Using TensorFlow backend.
+save new model successfully ./checkpoints/models/sleeve_length_labels_nas_model.h5
