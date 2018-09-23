@@ -5,16 +5,17 @@ import glob
 import os
 import os.path
 from subprocess import call
+from multiprocessing import Pool
 
-def extract_files():
-    data_file = []
-    class_files = glob.glob(os.path.join('/home/sk49/workspace/dataset/character_recog_iqiyi/test/IQIYI_VID_TEST','*.mp4'))
+def extract_files(class_files):
 
-    for video_path in class_files:
+        video_path =class_files
         # Get the parts of the file.
-        video_parts = get_video_parts(video_path)
         # print(video_parts)
-        filename_no_ext, filename = video_parts
+        filename = video_path[0]
+        filename_no_ext = video_path[0].split('.')[0]
+        video_parts=filename_no_ext,filename
+        print(video_parts)
 
         # Only extract if we haven't done it yet. Otherwise, just get
         # the info.
@@ -32,7 +33,6 @@ def extract_files():
         print("Generated %d frames for %s" % (nb_frames, filename_no_ext))
 
 
-    print("Extracted and wrote %d video files." % (len(data_file)))
 
 def get_nb_frames_for_video(video_parts):
     """Given video parts of an (assumed) already extracted video, return
@@ -56,14 +56,18 @@ def check_already_extracted(video_parts):
     return bool(os.path.exists(os.path.join('/home/sk49/workspace/dataset/QIYI_FACE/Test/leak',
                                filename_no_ext + '-0001.jpg')))
 
-def main():
-    """
-    Extract images from videos and build a new file that we
-    can use as our data input file. It can have format:
 
-    [mechanicalmeter|test], class, filename, nb frames
-    """
-    extract_files()
 
 if __name__ == '__main__':
-    main()
+    class_files=[]
+    # class_files = glob.glob(os.path.join('/home/sk49/workspace/dataset/character_recog_iqiyi/test/IQIYI_VID_TEST','*.mp4'))
+    with open('unread_video.csv','r') as f:
+        reader=csv.reader(f, delimiter=',')
+        for row in reader:
+            class_files.append(row)
+
+    pool=Pool(10)
+    pool.map(extract_files,class_files)
+    pool.close()
+    pool.join()
+    print("done")
